@@ -21,7 +21,7 @@ MongoClient.connect('mongodb://localhost:27017',(err,client)=>{
     // });
 
 
-    //find One and delete
+    //find One and delete----Same as delete One but returns the deleted document in case you need it to show.
     // db.collection('Todos').findOneAndDelete({completed:false}).then((result)=>{
     //     console.log(result);
     // });
@@ -33,5 +33,7 @@ MongoClient.connect('mongodb://localhost:27017',(err,client)=>{
     }).then((result)=>{
         console.log(JSON.stringify(result,undefined,2));
     });
-    //client.close()
+    
+    
+    client.close()
 });
